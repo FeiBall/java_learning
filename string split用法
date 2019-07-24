@@ -1,0 +1,11 @@
+public class teststring {
+	public static void main(String args[]){
+  String ss = "frh1,frh2,frh3";
+  String s[] = ss.split(",");
+  for(int i = 0 ; i < s ; i++)
+  {
+      System.out.println(s[i]);
+  }
+	}
+
+}
