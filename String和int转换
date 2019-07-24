@@ -6,9 +6,12 @@ public class teststring {
 		System.out.println(i);
 		
 		
-		String s1 = "frh";
+		String s1 = "frh";  //先从常量池找
 		String s2 = "frh";
 		System.out.println(s1==s2); // 结果为true
+		
+		String s3 = new String("frh");   //手动创建
+		System.out.println(s1==s3); //结果为false
 	}
 
 }
