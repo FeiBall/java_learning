@@ -8,7 +8,7 @@ public class teststring {
 		
 		String s1 = "frh";
 		String s2 = "frh";
-		System.out.println(s1==s2);
+		System.out.println(s1==s2); // 结果为true
 	}
 
 }
