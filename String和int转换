@@ -4,6 +4,11 @@ public class teststring {
 		Integer i = Integer.parseInt(s);
 		i++;
 		System.out.println(i);
+		
+		
+		String s1 = "frh";
+		String s2 = "frh";
+		System.out.println(s1==s2);
 	}
 
 }
