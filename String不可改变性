@@ -9,6 +9,7 @@ public class Tstring {
     
     //public final class String 
     //private final char Value[]
+    //出于线程安全考虑？
 	}
 
 }
