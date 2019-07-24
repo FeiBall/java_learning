@@ -1,0 +1,16 @@
+package hello;
+import java.util.Scanner;
+public class fuck {
+	public static void main(String args[]){
+		System.out.println("zhongwen");
+		Scanner in = new Scanner(System.in);
+
+        int x = in.nextInt();
+		while(true){
+		//	Scanner in = new Scanner(System.in);
+			System.out.println(x);
+		}
+		
+	}
+
+}
