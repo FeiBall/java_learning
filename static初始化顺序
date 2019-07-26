@@ -1,0 +1,39 @@
+public class Window {
+	public Window(int maker){
+		System.out.println("Window("+maker+")");
+	}
+}
+
+public class House {
+	private Window w3 = new Window(3);
+	public House(){
+		System.out.println("House()");
+		w1 = new Window(4);
+	}
+	
+	private static final Window w2 = new Window(2);
+	private static Window w1 = new Window(1);
+	static{
+		w1 = new Window(33);
+	}
+	public void f(){System.out.println("f()");} //普通成员方法
+	public static void f1(){System.out.println("f1()");} //静态成员方法
+
+}
+
+public class WindowTest {
+	public static void main(String args[]){
+//		House h1 = new House();
+//		h1.f();
+		House.f1();//只调用静态成员方法则没有创建对象，那么也就不会调用构造函数，不回加载成员属性，和静态有关的会加载
+	}
+
+}
+
+//假设有一个名为House的类:
+//1.	当首次创建类型为House的对象时，或者House类的静态方法静态域首次被访问时，Java就会定位其House.class文件
+//2.	定位完毕后，Java会载入House.class，在这个时候，像例子中private static Window w1=new Window(1);这样的静态初始化的所有动作都会执行，包括执行static代码块，因此，静态初始化只在House对象首次加载的时候进行一次。
+//3.	当用new House()创建对象的时候，首先将在堆上为House对象分配足够的存储空间。
+//4.	这块存储空间会被清零，这就自动地将House对象中的所有基本类型数据都设置成了默认值（比如int就是0），而引用则被设置成了null。
+//5.	执行所有出现于字段定义处的初始化操作（也就是private Window w3=new Window(3)）
+//6.	执行构造器（在学了继承之后这里的顺序也有值得探讨的地方）。
