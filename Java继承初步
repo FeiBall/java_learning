@@ -1,0 +1,46 @@
+public class Person {
+
+	public String age = "21";
+	public String name = "frh";
+	
+	public Person(String age, String name){
+		this.age = age;
+		this.name = name;
+		System.out.println("Person called");
+	}
+	
+	public void talk(){
+		System.out.println("Person:"+age+" "+ name);
+	}
+	public static void info(){
+		System.out.println("Person info");
+	}
+}
+
+public class teacher extends Person{
+	private String subject = "Math";
+	
+	public teacher(String age,String name, String subject){
+		super(age,name); //调用父类构造函数
+		this.subject = subject;
+		System.out.println("teacher called");
+	}
+	
+	public void Tellsubject(){
+		System.out.println("Subject:"+subject);
+	}
+
+}
+
+public class TestTeacher {
+	public static void main(String args[]){
+		teacher tch = new teacher("22","feiiqu","Yuwen");
+		tch.talk();
+		tch.Tellsubject();
+		System.out.println(tch.age+" "+tch.name);
+		tch.info();
+		
+		Person tch1 = new teacher("23","feiball","Math");
+	}
+
+}
