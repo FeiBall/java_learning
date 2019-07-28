@@ -1,0 +1,18 @@
+package hello;
+
+import hello.*;
+
+public class Test{
+	public static void main(String args[]){
+
+		Person p = new teacher("24","fff","Math");
+		
+	}
+	public void call(Object o){
+		Person p = (Person)o;
+		p.talk();
+	}
+
+}
+
+/*父类引用p向上转型为子类对象，并传递给call方法中的o,然后强制转换（向下转型为Person类型）。*/
