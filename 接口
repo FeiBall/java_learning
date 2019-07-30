@@ -1,0 +1,39 @@
+package learning1;
+
+public interface Reculator {
+	public int a = 0;
+	public void high();
+	public void low();
+
+}
+
+import java.io.Serializable;
+
+public class Radio implements Reculator,Serializable{
+	private int rate = a;
+	@Override
+	public void high(){
+		rate = 100;
+		System.out.println("the rate is:"+rate);
+	}
+	
+	@Override
+	public void low(){
+		rate = 10;
+		System.out.println("the rate is:"+rate);
+	}
+	
+	public void shutdown(){
+		this.rate = 0;
+	}
+
+}
+
+public class Test {
+	public static void main(String args[]){
+		Radio t = new Radio();
+		t.high();
+		t.low();
+	}
+
+}
