@@ -1,0 +1,31 @@
+package learning1;
+
+public class Student {
+	private String name = "frh";
+	private int age = 21;
+	public int Age(){
+		return age;
+	}
+	
+	public class Professor{
+		private String name = "feng";
+		public void tell(){
+			System.out.print(Student.this.name+" "+Age()+this.name);
+		}
+	}
+	
+	public void Test(){
+		Professor p = new Professor();
+		String temp = p.name;
+		p.tell();
+	}
+	
+	public static class Test{
+		public static void main(String args[]){
+			Student stu = new Student();
+			Student.Professor pro = stu.new Professor();
+			pro.tell();
+		}
+	}
+
+}
