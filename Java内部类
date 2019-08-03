@@ -29,3 +29,4 @@ public class Student {
 	}
 
 }
+//Java内部类可以继承其他类
