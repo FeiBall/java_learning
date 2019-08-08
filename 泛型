@@ -1,0 +1,21 @@
+package learning1;
+
+import java.util.*;
+
+
+public class Test{
+	public static void main(String args[]){
+		List<Integer> list1 = new ArrayList<Integer>();
+		List<String> list2 = new ArrayList<String>();
+		list1.add(1);list1.add(2);list1.add(3);
+		list1.remove(new Integer(2));
+		Iterator<Integer> it = list1.iterator();
+		while(it.hasNext())
+		{
+			System.out.print(it.next()+" ");
+		}
+		list2.add("hi");list2.add("hello");
+		System.out.print(list2.get(1)+" "+list2.size());
+	}
+
+}
